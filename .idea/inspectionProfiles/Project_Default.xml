@@ -1,0 +1,42 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="3">
+            <item index="0" class="java.lang.String" itemvalue="pyDOE" />
+            <item index="1" class="java.lang.String" itemvalue="services" />
+            <item index="2" class="java.lang.String" itemvalue="streamlit" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N802" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="object.intercept_" />
+          <option value="oboe.polynomials" />
+          <option value="src.oboe.polynomials" />
+          <option value="boss.bo" />
+          <option value="matplotlib.pyplot" />
+          <option value="GPyOpt.acquisitions.EI_DFT" />
+          <option value="hper_bo.plotting_data_fusion" />
+          <option value="src.pages.Run_BOSS.services" />
+          <option value="src.pages.run_BOSS.services" />
+          <option value="src.pages.run_BOSS.page_config" />
+          <option value="src.pages.tutorial.ui" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
