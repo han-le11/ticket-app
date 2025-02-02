@@ -44,4 +44,7 @@ Generate a TicketEvent with
 python3 produce_ticket_event.py -c "<customer-id>" -r "<ride_number>"
 ```
 
-With these scripts you can check whether the messages are received as expected. 
+With these scripts, it can be checked whether the messages are received as expected. 
+
+## Testing and code documentation:
+The code needs to be documentated more e.g. with python doctring. Testing still needs to be done. 
