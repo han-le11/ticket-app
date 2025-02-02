@@ -15,17 +15,30 @@ class TicketEventProducer:
         self.exchange = "ticket_events_exchange"
         self.routing_key = "ticket_event"
 
+    # TODO: test this function
     def initialize_rabbitmq(self):
-        # To implement - Initialize the RabbitMq connection, channel, exchange and queue here
+        """
+        Initialize the RabbitMq connection, channel, exchange and queue.
+        :return:
+        """
+        self.connection = pika.BlockingConnection(
+            pika.ConnectionParameters(host="localhost")
+        )
+        self.channel = self.connection.channel()
+        self.channel.exchange_declare(exchange=self.exchange, exchange_type="fanout")
         xprint("TicketEventProducer initialize_rabbitmq() called")
 
+    # TODO: Use json.dumps(vars(ticket_event)) to convert the ticket_event object to JSON
     def publish_ticket_event(self, ticket_event):
+        """
+        Publish a message to the Rabbitmq
+        :param ticket_event:
+        :return:
+        """
         xprint("TicketEventProducer: Publishing ticket event {}"
                .format(vars(ticket_event)))
-        # To implement - publish a message to the Rabbitmq here
-        # Use json.dumps(vars(ticket_event)) to convert the shopping_event object to JSON
+
 
     def close(self):
-        # Do not edit this method
         self.channel.close()
         self.connection.close()
